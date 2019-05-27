@@ -14,8 +14,18 @@ links:
       0.0002369394, 1.0608E-8, -3.322424E-6,
       1.0608E-8, 0.0001612104, 4.6692E-8,
       -3.322424E-6, 4.6692E-8, 0.0001608802 ]
-    elements: { Resource: { uri: "Thormang3_parts/robotis_pelvis_link.wrl" } }
-
+    elements:
+      -
+        type: Resource
+        uri: "Thormang3_parts/robotis_pelvis_link.wrl"
+      -
+        type: AccelerationSensor
+        name: WaistAccelSensor
+        id: 0
+      -
+        type: RateGyroSensor
+        name: WaistGyro
+        id: 0
   -
     name: TORSO_Y
     parent: WAIST
@@ -503,7 +513,14 @@ links:
       6.01175E-7, 5.7E-11, -4.4577E-8,
       5.7E-11, 3.544498E-6, 2.3E-11,
       -4.4577E-8, 2.3E-11, 3.417531E-6 ]
-    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_foot.wrl" } }
+    elements:
+      -
+        type: Resource
+        uri: "Thormang3_parts/robotis_l_leg_foot.wrl"
+      -
+        type: ForceSensor
+        name: LeftSoleForceSensor
+        id: 0
   -
     name: RLEG_HIP_Y
     parent: WAIST
@@ -634,7 +651,14 @@ links:
       6.01175E-7, 5.7E-11, -4.4577E-8,
       5.7E-11, 3.544498E-6, 2.3E-11,
       -4.4577E-8, 2.3E-11, 3.417531E-6 ]
-    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_foot.wrl" } }
+    elements:
+      -
+        type: Resource
+        uri: "Thormang3_parts/robotis_r_leg_foot.wrl"
+      -
+        type: ForceSensor
+        name: LeftSoleForceSensor
+        id: 0
   -
     name: HEAD_Y
     parent: TORSO_Y
